@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>lanraragi</Name>
+  <Repository>difegue/lanraragi</Repository>
+  <Registry>https://hub.docker.com/r/difegue/lanraragi/</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support/>
+  <Project>https://sugoi.gitbook.io/lanraragi/</Project>
+  <Overview>Web interface and reader for storage of comics/manga on NAS.</Overview>
+  <Category>MediaApp:Other</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL/>
+  <Icon>https://raw.githubusercontent.com/nuiker/docker-templates/master/img/lanraragi.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1598642541</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Web interface and reader for storage of comics/manga on NAS.</Description>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>3450</HostPort>
+        <ContainerPort>3000</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/home/koyomi/lanraragi/content</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir>/mnt/user/appdata/lanraragi/database</HostDir>
+      <ContainerDir>/home/koyomi/lanraragi/database</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <Environment/>
+  <Labels/>
+  <Config Name="Host Port 1" Target="3000" Default="" Mode="tcp" Description="Container Port: 3000" Type="Port" Display="always" Required="false" Mask="false">3450</Config>
+  <Config Name="Host Path 1" Target="/home/koyomi/lanraragi/content" Default="" Mode="rw" Description="Container Path: /home/koyomi/lanraragi/content" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/storage/ring/lanraragi/</Config>
+  <Config Name="Host Path 2" Target="/home/koyomi/lanraragi/database" Default="" Mode="rw" Description="Container Path: /home/koyomi/lanraragi/database" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/lanraragi/database</Config>
+</Container>
